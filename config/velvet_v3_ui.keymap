@@ -36,6 +36,20 @@
         };
     };
 
+    combos {
+        compatible = "zmk,combos";
+
+        left-curly-brace {
+            bindings = <&kp LEFT_BRACE>;
+            key-positions = <15 16>;
+        };
+
+        right-curly-bracen {
+            bindings = <&kp RIGHT_BRACE>;
+            key-positions = <19 20>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
