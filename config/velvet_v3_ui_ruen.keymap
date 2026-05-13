@@ -90,7 +90,7 @@
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
-            flavor = "balanced";
+            flavor = "hold-preferred";
         };
 
         zip_auto_mouse: zip_auto_mouse {
@@ -211,7 +211,7 @@
 &trans  &kp PIPE   &kp HASH   &kp LESS_THAN  &kp GT    &kp CARET                           &kp GRAVE  &kp DQT           &kp UNDER          &kp SQT       &kp TILDE     &trans
 &trans  &kp AMPS   &kp EQUAL  &kp LPAR       &kp RPAR  &kp PRCNT                           &kp DLLR   &kp LBRC          &kp RIGHT_BRACE    &kp CM_COLON  &kp QUESTION  &none
 &trans  &kp SLASH  &kp ASTRK  &kp MINUS      &kp PLUS  &kp BACKSLASH                       &kp AT     &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp P         &kp EXCL      &trans
-                   &trans     &trans         &trans    &trans         &trans    &kp COMMA  &kp DOT    &trans            &trans             &trans
+                   &trans     &trans         &trans    &mo 3          &trans    &kp COMMA  &kp DOT    &trans            &trans             &trans
             >;
 
             display-name = "Symbols";
@@ -220,10 +220,10 @@
         sym_ru {
             display-name = "Symbols";
             bindings = <
-&trans  &en PIPE      &en HASH      &en LESS_THAN  &en GT       &en CARET                              &en GRAVE  &kp RU_DQT        &kp RU_UNDER       &en SQT       &en TILDE           &trans
-&trans  &en AMPS      &kp RU_EQUAL  &kp RU_LPAR    &kp RU_RPAR  &kp RU_PERCENT                         &en DLLR   &en LBRC          &en RIGHT_BRACE    &kp RU_COLON  &kp RU_QUESTION     &kp RU_NUMERO
-&trans  &kp RU_SLASH  &en STAR      &kp RU_MINUS   &kp RU_PLUS  &kp RU_BACKSLASH                       &en AT     &en LEFT_BRACKET  &en RIGHT_BRACKET  &kp RU_SEMI   &kp RU_EXCLAMATION  &trans
-                      &trans        &trans         &trans       &trans            &trans    &en COMMA  &en DOT    &trans            &trans             &trans
+&trans  &en PIPE      &en HASH      &en LESS_THAN  &en GT       &en CARET                                 &en GRAVE   &kp RU_DQT        &kp RU_UNDER       &en SQT       &en TILDE           &trans
+&trans  &en AMPS      &kp RU_EQUAL  &kp RU_LPAR    &kp RU_RPAR  &kp RU_PERCENT                            &en DLLR    &en LBRC          &en RIGHT_BRACE    &kp RU_COLON  &kp RU_QUESTION     &kp RU_NUMERO
+&trans  &kp RU_SLASH  &en STAR      &kp RU_MINUS   &kp RU_PLUS  &kp RU_BACKSLASH                          &en AT      &en LEFT_BRACKET  &en RIGHT_BRACKET  &kp RU_SEMI   &kp RU_EXCLAMATION  &trans
+                      &trans        &trans         &trans       &mo 4             &trans    &kp RU_COMMA  &kp RU_DOT  &trans            &trans             &trans
             >;
         };
 
