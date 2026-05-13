@@ -189,7 +189,7 @@
             bindings = <
 &trans  &kp PIPE   &kp HASH   &kp LESS_THAN  &kp GT    &kp CARET                           &kp GRAVE  &kp DQT           &kp UNDER          &kp SQT    &kp TILDE     &trans
 &trans  &kp EQUAL  &kp AMPS   &kp LPAR       &kp RPAR  &kp PRCNT                           &kp DLLR   &kp LBRC          &kp RIGHT_BRACE    &kp COLON  &kp QUESTION  &none
-&trans  &kp SLASH  &kp ASTRK  &kp MINUS      &kp PLUS  &kp BACKSLASH                       &kp AT     &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp SEMI   &kp EXCL      &trans
+&trans  &kp SLASH  &kp ASTRK  &kp MINUS      &kp PLUS  &kp BACKSLASH                       &kp AT     &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp P      &kp EXCL      &trans
                    &trans     &trans         &trans    &trans         &trans    &kp COMMA  &kp DOT    &trans            &trans             &trans
             >;
 
