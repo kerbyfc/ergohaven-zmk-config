@@ -176,10 +176,10 @@
 
         nav {
             bindings = <
-&kp LEFT_ALT  &kp N1         &kp N2    &kp N3                &kp N4                 &kp N5                     &kp N6   &kp N7                    &kp N8                     &kp N9   &kp N0  &trans
-&trans        &kp PAGE_UP    &kp HOME  &kp LG(LEFT_BRACKET)  &kp LG(RIGHT_BRACKET)  &kp INS                    &kp DEL  &kp LS(LG(LEFT_BRACKET))  &kp LS(LG(RIGHT_BRACKET))  &kp END  &none   &none
-&trans        &kp PAGE_DOWN  &none     &none                 &kp LC(LEFT)           &none                      &none    &kp LC(RIGHT)             &trans                     &none    &none   &trans
-                             &none     &none                 &trans                 &trans   &trans    &trans  &trans   &trans                    &trans                     &trans
+&kp LEFT_ALT  &kp N1         &kp N2    &kp N3                    &kp N4                &kp N5                          &kp N6         &kp N7                 &kp N8                     &kp N9   &kp N0  &trans
+&trans        &kp PAGE_UP    &kp HOME  &kp LG(LS(LEFT_BRACKET))  &kp LG(LEFT_BRACKET)  &kp INS                         &kp DEL        &kp LG(RIGHT_BRACKET)  &kp LS(LG(RIGHT_BRACKET))  &kp END  &none   &none
+&trans        &kp PAGE_DOWN  &none     &none                     &kp LC(LEFT)          &kp LA(LEFT)                    &kp LA(RIGHT)  &kp LC(RIGHT)          &trans                     &none    &none   &trans
+                             &none     &none                     &trans                &trans        &trans    &trans  &trans         &trans                 &trans                     &trans
             >;
 
             display-name = "Nav";
@@ -187,10 +187,10 @@
 
         sym_en {
             bindings = <
-&trans  &kp HASH   &kp LT    &kp EQUAL     &kp GT    &kp GRAVE                       &kp CARET  &kp DQT           &kp UNDER  &kp SQT            &trans        &trans
-&trans  &kp BSLH   &kp LPAR  &kp MINUS     &kp RPAR  &kp PLUS                        &kp PRCNT  &kp LBRC          &kp SEMI   &kp RBRC           &kp EXCL      &trans
-&trans  &kp COMMA  &kp STAR  &kp CM_COLON  &kp FSLH  &kp DLLR                        &kp AT     &kp LEFT_BRACKET  &kp TILDE  &kp RIGHT_BRACKET  &kp QUESTION  &trans
-                   &trans    &trans        &trans    &trans     &trans    &kp COMMA  &kp DOT    &trans            &kp PIPE   &kp AMPS
+&trans  &kp HASH  &kp LT    &kp EQUAL     &kp GT    &kp GRAVE                       &kp CARET  &kp DQT           &kp UNDER  &kp SQT            &kp AMPS      &trans
+&trans  &kp BSLH  &kp LPAR  &kp MINUS     &kp RPAR  &kp PLUS                        &kp PRCNT  &kp LBRC          &kp SEMI   &kp RBRC           &kp EXCL      &none
+&trans  &kp PIPE  &kp STAR  &kp CM_COLON  &kp FSLH  &kp DLLR                        &kp AT     &kp LEFT_BRACKET  &kp TILDE  &kp RIGHT_BRACKET  &kp QUESTION  &trans
+                  &trans    &trans        &trans    &trans     &trans    &kp COMMA  &kp DOT    &trans            &trans     &trans
             >;
 
             display-name = "Symbols";
@@ -199,10 +199,10 @@
         sym_ru {
             display-name = "Symbols";
             bindings = <
-&kp RU_CYRILLIC_IO  &en HASH          &en LT    &kp EQUAL     &en GT       &en GRAVE                          &en CARET   &kp RU_DQT        &kp UNDER    &en SQT            &trans        &trans
-&kp RU_NUMERO       &kp RU_BACKSLASH  &kp LPAR  &kp MINUS     &kp RPAR     &kp PLUS                           &kp PRCNT   &en LBRC          &kp RU_SEMI  &kp RBRC           &kp EXCL      &trans
-&trans              &kp RU_COMMA      &kp STAR  &kp RU_COLON  &kp RU_FSLH  &en DLLR                           &en AT      &en LEFT_BRACKET  &en TILDE    &en RIGHT_BRACKET  &kp QUESTION  &trans
-                                      &trans    &trans        &trans       &trans     &trans    &kp RU_COMMA  &kp RU_DOT  &trans            &en PIPE     &en AMPS
+&trans  &en HASH          &en LT    &kp EQUAL     &en GT       &en GRAVE                          &en CARET   &kp RU_DQT        &kp UNDER    &en SQT            &en AMPS      &trans
+&trans  &kp RU_BACKSLASH  &kp LPAR  &kp MINUS     &kp RPAR     &kp PLUS                           &kp PRCNT   &en LBRC          &kp RU_SEMI  &kp RBRC           &kp EXCL      &kp RU_NUMERO
+&trans  &en PIPE          &kp STAR  &kp RU_COLON  &kp RU_FSLH  &en DLLR                           &en AT      &en LEFT_BRACKET  &en TILDE    &en RIGHT_BRACKET  &kp QUESTION  &trans
+                          &trans    &trans        &trans       &trans     &trans    &kp RU_COMMA  &kp RU_DOT  &trans            &trans       &trans
             >;
         };
 
