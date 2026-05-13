@@ -223,7 +223,7 @@
 &trans  &en PIPE      &en HASH      &en LESS_THAN  &en GT       &en CARET                              &en GRAVE  &kp RU_DQT        &kp RU_UNDER       &en SQT       &en TILDE           &trans
 &trans  &en AMPS      &kp RU_EQUAL  &kp RU_LPAR    &kp RU_RPAR  &kp RU_PERCENT                         &en DLLR   &en LBRC          &en RIGHT_BRACE    &kp RU_COLON  &kp RU_QUESTION     &kp RU_NUMERO
 &trans  &kp RU_SLASH  &en STAR      &kp RU_MINUS   &kp RU_PLUS  &kp RU_BACKSLASH                       &en AT     &en LEFT_BRACKET  &en RIGHT_BRACKET  &kp RU_SEMI   &kp RU_EXCLAMATION  &trans
-                      &trans        &trans         &trans       &trans            &trans    &kp COMMA  &kp DOT    &trans            &trans             &trans
+                      &trans        &trans         &trans       &trans            &trans    &en COMMA  &en DOT    &trans            &trans             &trans
             >;
         };
 
