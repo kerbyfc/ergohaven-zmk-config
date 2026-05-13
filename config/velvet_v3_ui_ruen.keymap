@@ -83,6 +83,15 @@
             flavor = "hold-preferred";
         };
 
+        hsl: HSL {
+            compatible = "zmk,behavior-hold-tap";
+            label = "h_mo_or_sl";
+            bindings = <&mo>, <&sl>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+        };
+
         zip_auto_mouse: zip_auto_mouse {
             compatible = "zmk,input-processor-temp-layer";
             #input-processor-cells = <2>;
@@ -166,7 +175,7 @@
 
         en {
             bindings = <
-&kp TAB       &kp Q  &kp W     &kp E      &kp R          &kp T                                       &kp Y      &kp U  &kp I      &kp O    &kp P     &mo 2
+&kp TAB       &kp Q  &kp W     &kp E      &kp R          &kp T                                       &kp Y      &kp U  &kp I      &kp O    &kp P     &hsl 2 2
 &kp CAPSLOCK  &kp A  &kp S     &kp D      &kp F          &kp G                                       &kp H      &kp J  &kp K      &kp L    &kp SEMI  &kp SLASH
 &kp LSHFT     &kp Z  &kp X     &kp C      &kp V          &kp B                                       &kp N      &kp M  &kp COMMA  &kp DOT  &kp SQT   &kp LEFT_ALT
                      &kp LEFT  &kp RIGHT  &kp BACKSPACE  &mo 3  &ru_cmd LEFT_COMMAND 0    &kp ENTER  &kp SPACE  &none  &kp DOWN   &kp UP
@@ -178,7 +187,7 @@
         ru {
             display-name = "Ru";
             bindings = <
-&kp TAB    &kp RU_CYRILLIC_SHORT_I  &kp RU_CYRILLIC_TSE   &kp RU_CYRILLIC_U   &kp RU_CYRILLIC_KA  &td_io                                                   &kp RU_CYRILLIC_EN  &kp RU_CYRILLIC_GHE  &kp RU_CYRILLIC_SHA  &kp RU_CYRILLIC_SHCHA  &kp RU_CYRILLIC_ZE   &mo 2
+&kp TAB    &kp RU_CYRILLIC_SHORT_I  &kp RU_CYRILLIC_TSE   &kp RU_CYRILLIC_U   &kp RU_CYRILLIC_KA  &td_io                                                   &kp RU_CYRILLIC_EN  &kp RU_CYRILLIC_GHE  &kp RU_CYRILLIC_SHA  &kp RU_CYRILLIC_SHCHA  &kp RU_CYRILLIC_ZE   &hsl 2 2
 &kp CAPS   &kp RU_CYRILLIC_EF       &kp RU_CYRILLIC_YERU  &kp RU_CYRILLIC_VE  &kp RU_CYRILLIC_A   &kp RU_CYRILLIC_PE                                       &kp RU_CYRILLIC_ER  &kp RU_CYRILLIC_O    &kp RU_CYRILLIC_EL   &kp RU_CYRILLIC_DE     &kp RU_CYRILLIC_ZHE  &kp RU_CYRILLIC_E
 &kp LSHFT  &kp RU_CYRILLIC_YA       &kp RU_CYRILLIC_CHE   &kp RU_CYRILLIC_ES  &kp RU_CYRILLIC_EM  &kp RU_CYRILLIC_I                                        &kp RU_CYRILLIC_TE  &td_signs            &kp RU_CYRILLIC_BE   &kp RU_CYRILLIC_YU     &kp RU_CYRILLIC_HA   &kp LEFT_ALT
                                     &kp LEFT              &kp RIGHT           &kp BSPC            &mo 4               &en_cmd LEFT_COMMAND 0    &kp ENTER  &kp SPACE           &none                &kp DOWN             &kp UP
