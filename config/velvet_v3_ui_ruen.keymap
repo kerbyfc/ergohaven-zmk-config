@@ -213,9 +213,9 @@
 
         sym_en {
             bindings = <
-&trans  &none        &kp AT     &none   &kp DLLR  &none                     &kp ASTRK  &kp LEFT_BRACKET  &kp AMPS       &kp RIGHT_BRACKET  &kp BACKSLASH  &kp CARET
-&trans  &kp PERCENT  &kp LPAR   &trans  &kp RPAR  &none                     &kp PLUS   &kp LBRC          &kp EQUAL      &kp RIGHT_BRACE    &kp UNDER      &kp SINGLE_QUOTE
-&trans  &kp TILDE    &kp GRAVE  &none   &kp HASH  &none                     &kp MINUS  &kp EXCL          &kp LESS_THAN  &kp GREATER_THAN   &kp SLASH      &trans
+&trans  &kp CARET    &kp AT     &none   &kp DLLR  &none                     &kp ASTRK  &kp LEFT_BRACKET  &kp AMPS       &kp RIGHT_BRACKET  &kp P      &kp BACKSLASH
+&trans  &kp PERCENT  &kp LPAR   &trans  &kp RPAR  &none                     &kp PLUS   &kp LBRC          &kp EQUAL      &kp RIGHT_BRACE    &kp UNDER  &kp SINGLE_QUOTE
+&trans  &kp TILDE    &kp GRAVE  &none   &kp HASH  &none                     &kp MINUS  &kp EXCL          &kp LESS_THAN  &kp GREATER_THAN   &kp SLASH  &trans
                      &trans     &trans  &trans    &trans  &trans    &trans  &trans     &trans            &trans         &trans
             >;
 
@@ -226,9 +226,9 @@
         sym_ru {
             display-name = "Symbols ru";
             bindings = <
-&trans  &none        &en AT     &none   &en DLLR  &none                     &en ASTRK  &en LEFT_BRACKET  &en AMPS       &en RIGHT_BRACKET  &en BACKSLASH  &en CARET
-&trans  &en PERCENT  &en LPAR   &trans  &en RPAR  &none                     &en PLUS   &en LBRC          &en EQUAL      &en RIGHT_BRACE    &en UNDER      &en SINGLE_QUOTE
-&trans  &en TILDE    &en GRAVE  &none   &en HASH  &none                     &en MINUS  &en EXCL          &en LESS_THAN  &en GREATER_THAN   &en SLASH      &trans
+&trans  &en CARET    &en AT     &none   &en DLLR  &none                     &en ASTRK  &en LEFT_BRACKET  &en AMPS       &en RIGHT_BRACKET  &en P      &en BACKSLASH
+&trans  &en PERCENT  &en LPAR   &trans  &en RPAR  &none                     &en PLUS   &en LBRC          &en EQUAL      &en RIGHT_BRACE    &en UNDER  &en SINGLE_QUOTE
+&trans  &en TILDE    &en GRAVE  &none   &en HASH  &none                     &en MINUS  &en EXCL          &en LESS_THAN  &en GREATER_THAN   &en SLASH  &trans
                      &trans     &trans  &trans    &trans  &trans    &trans  &trans     &trans            &trans         &trans
             >;
         };
