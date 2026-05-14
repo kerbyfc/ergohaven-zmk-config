@@ -246,9 +246,9 @@
 
         en {
             bindings = <
-&kp TAB       &kp Q  &kp W     &kp E      &kp R          &kp T                                            &kp Y      &kp U   &kp I      &kp O    &kp P     &kp LEFT_BRACKET
-&kp CAPSLOCK  &kp A  &hrl 2 S  &lt 4 D    &hrl 3 F       &kp G                                            &kp H      &kp J   &kp K      &kp L    &kp O     &kp SINGLE_QUOTE
-&kp LSHFT     &kp Z  &kp X     &kp C      &kp V          &kp B                                            &kp N      &kp M   &kp COMMA  &kp DOT  &kp FSLH  &kp LG(LEFT_ALT)
+&kp TAB       &kp Q  &kp W     &kp E      &kp R          &kp T                                            &kp Y      &kp U   &kp I      &kp O    &kp P          &kp LEFT_BRACKET
+&kp CAPSLOCK  &kp A  &hrl 2 S  &lt 4 D    &hrl 3 F       &kp G                                            &kp H      &kp J   &kp K      &kp L    &kp SEMICOLON  &kp SINGLE_QUOTE
+&kp LSHFT     &kp Z  &kp X     &kp C      &kp V          &kp B                                            &kp N      &kp M   &kp COMMA  &kp DOT  &kp FSLH       &kp LG(LEFT_ALT)
                      &kp LEFT  &kp RIGHT  &kp BACKSPACE  &mo_to_ru LEFT_GUI 0  &kp LEFT_ALT    &kp ENTER  &kp SPACE  &trans  &kp DOWN   &kp UP
             >;
 
@@ -344,13 +344,18 @@
     conditional_layers {
         compatible = "zmk,conditional-layers";
 
-        avtivate_en_with_nav {
+        activate_en_with_nav {
             if-layers = <2>;
             then-layer = <0>;
         };
 
         activate_en_with_num {
             if-layers = <3>;
+            then-layer = <0>;
+        };
+
+        activate_en_with_sym {
+            if-layers = <4>;
             then-layer = <0>;
         };
     };
