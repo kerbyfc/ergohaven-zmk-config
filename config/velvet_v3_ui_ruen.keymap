@@ -226,7 +226,7 @@
         sym_ru {
             display-name = "Symbols ru";
             bindings = <
-&trans  &none        &en AT     &none   &en DLLR  &none                     &en ASTRK  &en LEFT_BRACKET  &en AMPS       &en RIGHT_BRACKET  &kp P      &en CARET
+&trans  &none        &en AT     &none   &en DLLR  &none                     &en ASTRK  &en LEFT_BRACKET  &en AMPS       &en RIGHT_BRACKET  &en P      &en CARET
 &trans  &en PERCENT  &en LPAR   &trans  &en RPAR  &none                     &en PLUS   &en LBRC          &en EQUAL      &en RIGHT_BRACE    &en UNDER  &en SINGLE_QUOTE
 &trans  &en TILDE    &en GRAVE  &none   &en HASH  &none                     &en MINUS  &en EXCL          &en LESS_THAN  &en GREATER_THAN   &en SLASH  &trans
                      &trans     &trans  &trans    &trans  &trans    &trans  &trans     &trans            &trans         &trans
