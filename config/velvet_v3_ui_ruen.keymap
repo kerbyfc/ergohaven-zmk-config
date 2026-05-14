@@ -149,6 +149,20 @@
             tapping-term-ms = <200>;
         };
 
+        hrl: hrl {
+            compatible = "zmk,behavior-hold-tap";
+            label = "Home row left";
+            bindings = <&mo>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <280>;
+            require-prior-idle-ms = <150>;
+            quick-tap-ms = <175>;
+            hold-trigger-key-positions = <6 18 30 31 19 7 20 32 8 9 10 11 23 22 21 33 34 35 45 44 41 42>;
+            hold-trigger-on-release;
+            flavor = "balanced";
+        };
+
         zip_auto_mouse: zip_auto_mouse {
             compatible = "zmk,input-processor-temp-layer";
             #input-processor-cells = <2>;
@@ -253,10 +267,10 @@
 
         nav {
             bindings = <
-&trans  &none  &none   &none        &none      &none                     &none     &none          &none        &none      &none  &none
-&trans  &none  &trans  &untab_lbrt  &tab_rbrt  &none                     &kp LEFT  &kp DOWN       &kp UP       &kp RIGHT  &none  &none
-&trans  &none  &none   &none        &none      &none                     &none     &kp PAGE_DOWN  &kp PAGE_UP  &none      &none  &trans
-               &trans  &trans       &trans     &trans  &trans    &trans  &trans    &trans         &trans       &trans
+&trans  &none  &none   &none   &none   &none                     &none     &none          &none        &none      &none    &none
+&trans  &none  &trans  &none   &none   &none                     &kp LEFT  &kp DOWN       &kp UP       &kp RIGHT  &kp TAB  &none
+&trans  &none  &none   &none   &none   &none                     &none     &kp PAGE_DOWN  &kp PAGE_UP  &none      &none    &trans
+               &trans  &trans  &trans  &trans  &trans    &trans  &trans    &trans         &trans       &trans
             >;
 
             display-name = "Nav";
