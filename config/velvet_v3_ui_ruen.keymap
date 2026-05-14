@@ -11,95 +11,11 @@
 
 / {
     behaviors {
-        cap_sen: cap_sen {
-            compatible = "zmk,behavior-hold-tap";
-            label = "CAP_SEN";
-            bindings = <&mo>, <&mkp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <150>;
-            hold-while-undecided;
-        };
-
-        mouse_layer: mouse_layer {
-            compatible = "zmk,behavior-sticky-key";
-            label = "MOUSE_LAYER";
-            bindings = <&mo>;
-            #binding-cells = <1>;
-            release-after-ms = <200>;
-        };
-
-        en_cmd: en_cmd {
-            compatible = "zmk,behavior-hold-tap";
-            label = "EN_CMD";
-            bindings = <&kp>, <&layer_en>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            flavor = "hold-preferred";
-        };
-
-        ru_cmd: ru_cmd {
-            compatible = "zmk,behavior-hold-tap";
-            label = "RU_CMD";
-            bindings = <&kp>, <&layer_ru>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            flavor = "hold-preferred";
-        };
-
-        hold_tap: hold_tap {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HOLD_TAP";
-            bindings = <&kp>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <100>;
-            flavor = "hold-preferred";
-        };
-
-        td_io: td_io {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TD_IO";
-            #binding-cells = <0>;
-            bindings = <&kp RU_CYRILLIC_IE>, <&kp RU_CYRILLIC_IO>;
-        };
-
         td_signs: td_signs {
             compatible = "zmk,behavior-tap-dance";
             label = "TD_SIGNS";
             #binding-cells = <0>;
             bindings = <&kp RU_CYRILLIC_SOFT_SIGN>, <&kp RU_CYRILLIC_HARD_SIGN>;
-        };
-
-        sym_cmd: sym_cmd {
-            compatible = "zmk,behavior-hold-tap";
-            label = "SYM_CMD";
-            bindings = <&mo>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            flavor = "hold-preferred";
-        };
-
-        hsl: HSL {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HSL";
-            bindings = <&mo>, <&sl>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-        };
-
-        new_behavior: new_behavior {
-            compatible = "zmk,behavior-hold-tap";
-            label = "NEW_BEHAVIOR";
-            bindings = <&kp>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <100>;
-            flavor = "hold-preferred";
         };
 
         mo_to_ru: mo_to_ru {
@@ -118,26 +34,6 @@
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
-        };
-
-        untab_lbrt: untab_lbrt {
-            compatible = "zmk,behavior-mod-morph";
-            label = "UNTAB_LBRT";
-            bindings = <&kp TAB>, <&kp LEFT_BRACKET>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LCTL)>;
-            keep-mods = <(MOD_LCTL)>;
-        };
-
-        tab_rbrt: tab_rbrt {
-            compatible = "zmk,behavior-mod-morph";
-            label = "TAB_RBRT";
-            bindings = <&kp TAB>, <&kp RIGHT_BRACKET>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LCTL)>;
-            keep-mods = <(MOD_LCTL)>;
         };
 
         mkpl: mkpl {
@@ -262,7 +158,7 @@
                      &kp LEFT  &kp RIGHT  &kp BACKSPACE  &mo_to_ru LEFT_GUI 0  &kp LEFT_ALT    &kp ENTER  &kp SPACE  &trans  &kp DOWN   &kp UP
             >;
 
-            display-name = "Base";
+            display-name = "En";
         };
 
         nav {
@@ -344,19 +240,9 @@
     conditional_layers {
         compatible = "zmk,conditional-layers";
 
-        activate_en_with_nav {
-            if-layers = <3>;
-            then-layer = <0>;
-        };
-
-        activate_en_with_num {
-            if-layers = <3>;
-            then-layer = <0>;
-        };
-
-        activate_en_with_sym {
-            if-layers = <4>;
-            then-layer = <0>;
+        activate_en {
+            if-layers = <2 3 4>;
+            then-layer = <1>;
         };
     };
 };
