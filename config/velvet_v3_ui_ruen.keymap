@@ -224,7 +224,7 @@
         en {
             bindings = <
 &kp TAB       &kp Q  &kp W     &kp E      &kp R          &kp T                                            &kp Y      &kp U   &kp I      &kp O    &kp P     &kp LEFT_BRACKET
-&kp CAPSLOCK  &kp A  &lt 2 S   &lt 4 D    &lt 3 F        &kp G                                            &kp H      &kp J   &kp K      &kp L    &kp APOS  &kp BSLH
+&kp CAPSLOCK  &kp A  &lt 2 S   &lt 4 D    &lt 3 F        &kp G                                            &kp H      &kp J   &kp K      &kp L    &kp O     &kp SINGLE_QUOTE
 &kp LSHFT     &kp Z  &kp X     &kp C      &kp V          &kp B                                            &kp N      &kp M   &kp COMMA  &kp DOT  &kp FSLH  &kp LG(LEFT_ALT)
                      &kp LEFT  &kp RIGHT  &kp BACKSPACE  &mo_to_ru LEFT_GUI 0  &kp LEFT_ALT    &kp ENTER  &kp SPACE  &trans  &kp DOWN   &kp UP
             >;
@@ -255,19 +255,19 @@
 
         Num {
             bindings = <
-&trans  &none  &none   &none   &none   &none                    &kp PERCENT  &kp N7  &kp N8  &kp N9  &kp ASTRK  &kp CARET
-&trans  &none  &none   &none   &none   &none                    &kp PLUS     &kp N4  &kp N5  &kp N6  &kp N0     &kp BACKSLASH
-&trans  &none  &none   &none   &none   &none                    &kp MINUS    &kp N1  &kp N2  &kp N3  &kp FSLH   &trans
-               &trans  &trans  &trans  &trans  &trans    &none  &none        &trans  &trans  &trans
+&trans  &none        &none   &none   &none   &none                    &kp ASTRK  &kp N7  &kp N8  &kp N9  &kp P     &kp CARET
+&trans  &kp PERCENT  &none   &none   &trans  &none                    &kp PLUS   &kp N4  &kp N5  &kp N6  &kp N0    &kp SINGLE_QUOTE
+&trans  &none        &none   &none   &none   &none                    &kp MINUS  &kp N1  &kp N2  &kp N3  &kp FSLH  &trans
+                     &trans  &trans  &trans  &trans  &trans    &none  &none      &trans  &trans  &trans
             >;
         };
 
         sym {
             bindings = <
-&trans  &none      &none      &none   &kp DLLR  &none                        &kp PERCENT  &kp LEFT_BRACKET  &kp AMPS       &kp RIGHT_BRACKET  &kp ASTRK     &kp CARET
-&trans  &none      &kp LPAR   &trans  &kp RPAR  &none                        &kp PLUS     &kp LBRC          &kp EQUAL      &kp RIGHT_BRACE    &kp P         &kp SINGLE_QUOTE
-&trans  &kp TILDE  &kp GRAVE  &none   &kp HASH  &none                        &kp MINUS    &kp EXCL          &kp LESS_THAN  &kp GREATER_THAN   &kp QUESTION  &trans
-                   &trans     &trans  &trans    &trans  &trans    &kp COMMA  &kp DOT      &trans            &trans         &trans
+&trans  &none        &none      &none   &kp DLLR  &none                        &kp ASTRK  &kp LEFT_BRACKET  &kp AMPS       &kp RIGHT_BRACKET  &kp P      &kp CARET
+&trans  &kp PERCENT  &kp LPAR   &trans  &kp RPAR  &none                        &kp PLUS   &kp LBRC          &kp EQUAL      &kp RIGHT_BRACE    &kp UNDER  &kp SINGLE_QUOTE
+&trans  &kp TILDE    &kp GRAVE  &none   &kp HASH  &none                        &kp MINUS  &kp EXCL          &kp LESS_THAN  &kp GREATER_THAN   &kp SLASH  &trans
+                     &trans     &trans  &trans    &trans  &trans    &kp COMMA  &kp DOT    &trans            &trans         &trans
             >;
 
             display-name = "Symbols";
