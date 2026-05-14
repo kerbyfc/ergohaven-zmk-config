@@ -140,6 +140,15 @@
             keep-mods = <(MOD_LCTL)>;
         };
 
+        mkpl: mkpl {
+            compatible = "zmk,behavior-hold-tap";
+            label = "MKPL";
+            bindings = <&mo>, <&mkp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+        };
+
         zip_auto_mouse: zip_auto_mouse {
             compatible = "zmk,input-processor-temp-layer";
             #input-processor-cells = <2>;
@@ -244,10 +253,10 @@
 
         nav {
             bindings = <
-&trans  &none  &none        &none   &none      &none                     &none     &none          &none        &none      &none  &none
-&trans  &none  &untab_lbrt  &trans  &tab_rbrt  &none                     &kp LEFT  &kp DOWN       &kp UP       &kp RIGHT  &none  &none
-&trans  &none  &none        &none   &none      &none                     &none     &kp PAGE_DOWN  &kp PAGE_UP  &none      &none  &trans
-               &trans       &trans  &trans     &trans  &trans    &trans  &trans    &trans         &trans       &trans
+&trans  &none  &none   &none        &none      &none                     &none     &none          &none        &none      &none  &none
+&trans  &none  &trans  &untab_lbrt  &tab_rbrt  &none                     &kp LEFT  &kp DOWN       &kp UP       &kp RIGHT  &none  &none
+&trans  &none  &none   &none        &none      &none                     &none     &kp PAGE_DOWN  &kp PAGE_UP  &none      &none  &trans
+               &trans  &trans       &trans     &trans  &trans    &trans  &trans    &trans         &trans       &trans
             >;
 
             display-name = "Nav";
@@ -286,10 +295,10 @@
 
         mouse {
             bindings = <
-&trans  &trans  &trans    &trans    &trans    &trans                   &trans  &trans    &trans    &trans    &trans  &trans
-&trans  &mo 7   &mkp MB3  &mkp MB2  &mkp MB1  &mo 8                    &mo 8   &mkp MB1  &mkp MB2  &mkp MB3  &mo 7   &trans
-&trans  &trans  &trans    &trans    &trans    &trans                   &trans  &trans    &trans    &trans    &trans  &trans
-                &trans    &trans    &trans    &mo 8   &mo 7    &trans  &trans  &trans    &trans    &trans
+&trans  &trans  &trans  &trans       &trans    &trans                      &trans    &trans         &trans       &trans  &trans  &trans
+&trans  &trans  &mo 7   &mkpl 8 MB2  &mkp MB1  &mkp MB3                    &mkp MB3  &mkp MB1       &mkpl 8 MB2  &mo 7   &trans  &trans
+&trans  &trans  &trans  &trans       &trans    &trans                      &trans    &kp PAGE_DOWN  &kp PAGE_UP  &trans  &trans  &trans
+                &trans  &trans       &trans    &trans    &trans    &trans  &trans    &trans         &trans       &trans
             >;
 
             display-name = "Mouse";
@@ -297,10 +306,10 @@
 
         scroll {
             bindings = <
-&trans  &trans  &trans    &trans    &trans    &trans                    &trans  &trans    &trans    &trans    &trans  &trans
-&trans  &trans  &mkp MB3  &mkp MB2  &mkp MB1  &trans                    &trans  &mkp MB1  &mkp MB2  &mkp MB3  &trans  &trans
-&trans  &trans  &trans    &trans    &trans    &trans                    &trans  &trans    &trans    &trans    &trans  &trans
-                &trans    &trans    &trans    &trans  &trans    &trans  &trans  &trans    &trans    &trans
+&trans  &trans  &trans  &trans       &trans    &trans                      &trans    &trans    &trans       &trans  &trans  &trans
+&trans  &trans  &trans  &mkpl 8 MB2  &mkp MB1  &mkp MB3                    &mkp MB3  &mkp MB1  &mkpl 8 MB2  &trans  &trans  &trans
+&trans  &trans  &trans  &trans       &trans    &trans                      &trans    &trans    &trans       &trans  &trans  &trans
+                &trans  &trans       &trans    &trans    &trans    &trans  &trans    &trans    &trans       &trans
             >;
 
             display-name = "Scroll";
@@ -308,10 +317,10 @@
 
         sniper {
             bindings = <
-&trans  &trans  &trans    &trans    &trans    &trans                    &trans  &trans    &trans    &trans    &trans  &trans
-&trans  &trans  &mkp MB3  &mkp MB2  &mkp MB1  &trans                    &trans  &mkp MB1  &mkp MB2  &mkp MB3  &trans  &trans
-&trans  &trans  &trans    &trans    &trans    &trans                    &trans  &trans    &trans    &trans    &trans  &trans
-                &trans    &trans    &trans    &trans  &trans    &trans  &trans  &trans    &trans    &trans
+&trans  &trans  &trans    &trans    &trans    &trans                      &trans    &trans    &trans    &trans    &trans  &trans
+&trans  &trans  &mkp MB3  &mkp MB2  &mkp MB1  &mkp MB3                    &mkp MB3  &mkp MB1  &mkp MB2  &mkp MB3  &trans  &trans
+&trans  &trans  &trans    &trans    &trans    &trans                      &trans    &trans    &trans    &trans    &trans  &trans
+                &trans    &trans    &trans    &trans    &trans    &trans  &trans    &trans    &trans    &trans
             >;
 
             display-name = "Sniper";
