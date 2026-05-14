@@ -191,10 +191,10 @@
 
         num_en {
             bindings = <
-&trans  &none        &none   &none   &none   &none                     &kp ASTRK  &kp N7  &kp N8  &kp N9  &kp P     &kp CARET
-&trans  &kp PERCENT  &none   &none   &trans  &none                     &kp PLUS   &kp N4  &kp N5  &kp N6  &kp N0    &kp SINGLE_QUOTE
-&trans  &none        &none   &none   &none   &none                     &kp MINUS  &kp N1  &kp N2  &kp N3  &kp FSLH  &trans
-                     &trans  &trans  &trans  &trans  &trans    &trans  &trans     &trans  &trans  &trans
+&trans  &none        &kp AT     &kp DLLR  &none   &none                     &kp ASTRK  &kp N7  &kp N8  &kp N9  &kp P     &kp CARET
+&trans  &kp PERCENT  &kp LPAR   &kp RPAR  &trans  &none                     &kp PLUS   &kp N4  &kp N5  &kp N6  &kp N0    &kp SINGLE_QUOTE
+&trans  &kp TILDE    &kp GRAVE  &kp HASH  &none   &none                     &kp MINUS  &kp N1  &kp N2  &kp N3  &kp FSLH  &trans
+                     &trans     &trans    &trans  &trans  &trans    &trans  &trans     &trans  &trans  &trans
             >;
 
             label = "Numbers en";
@@ -202,10 +202,10 @@
 
         num_ru {
             bindings = <
-&trans  &none           &none   &none   &none   &none                     &en ASTRK  &kp N7  &kp N8  &kp N9  &en P     &en CARET
-&trans  &en RU_PERCENT  &none   &none   &trans  &none                     &en PLUS   &kp N4  &kp N5  &kp N6  &kp N0    &en SINGLE_QUOTE
-&trans  &none           &none   &none   &none   &none                     &en MINUS  &kp N1  &kp N2  &kp N3  &en FSLH  &trans
-                        &trans  &trans  &trans  &trans  &trans    &trans  &trans     &trans  &trans  &trans
+&trans  &none           &en AT     &en DLLR  &none   &none                     &en ASTRK  &kp N7  &kp N8  &kp N9  &en P     &en CARET
+&trans  &en RU_PERCENT  &en LPAR   &en RPAR  &trans  &none                     &en PLUS   &kp N4  &kp N5  &kp N6  &kp N0    &en SINGLE_QUOTE
+&trans  &en TILDE       &en GRAVE  &en HASH  &none   &none                     &en MINUS  &kp N1  &kp N2  &kp N3  &en FSLH  &trans
+                        &trans     &trans    &trans  &trans  &trans    &trans  &trans     &trans  &trans  &trans
             >;
 
             label = "Numbers ru";
