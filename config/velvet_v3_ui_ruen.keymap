@@ -143,7 +143,7 @@
         en {
             bindings = <
 &kp TAB       &kp Q  &kp W     &kp E      &kp R          &kp T                                            &kp Y      &kp U   &kp I      &kp O    &kp P          &kp LEFT_BRACKET
-&kp CAPSLOCK  &kp A  &hrl 3 S  &lt 4 D    &hrl 3 F       &kp G                                            &kp H      &kp J   &kp K      &kp L    &kp SEMICOLON  &kp SINGLE_QUOTE
+&kp CAPSLOCK  &kp A  &hrl 3 S  &lt 5 D    &hrl 3 F       &kp G                                            &kp H      &kp J   &kp K      &kp L    &kp SEMICOLON  &kp SINGLE_QUOTE
 &kp LSHFT     &kp Z  &kp X     &kp C      &kp V          &kp B                                            &kp N      &kp M   &kp COMMA  &kp DOT  &kp FSLH       &kp LG(LEFT_ALT)
                      &kp LEFT  &kp RIGHT  &kp BACKSPACE  &mo_to_ru LEFT_GUI 0  &kp LEFT_ALT    &kp ENTER  &kp SPACE  &trans  &kp DOWN   &kp UP
             >;
@@ -155,7 +155,7 @@
             display-name = "Ru";
             bindings = <
 &kp TAB    &kp RU_CYRILLIC_SHORT_I  &kp RU_CYRILLIC_TSE     &kp RU_CYRILLIC_U     &kp RU_CYRILLIC_KA   &kp RU_CYRILLIC_IE                               &kp RU_CYRILLIC_EN  &kp RU_CYRILLIC_GHE  &kp RU_CYRILLIC_SHA  &kp RU_CYRILLIC_SHCHA  &kp RU_CYRILLIC_ZE   &kp RU_CYRILLIC_HA
-&kp CAPS   &kp RU_CYRILLIC_EF       &lt 3 RU_CYRILLIC_YERU  &lt 4 RU_CYRILLIC_VE  &lt 3 RU_CYRILLIC_A  &kp RU_CYRILLIC_PE                               &kp RU_CYRILLIC_ER  &kp RU_CYRILLIC_O    &kp RU_CYRILLIC_EL   &kp RU_CYRILLIC_DE     &kp RU_CYRILLIC_ZHE  &kp RU_CYRILLIC_E
+&kp CAPS   &kp RU_CYRILLIC_EF       &lt 3 RU_CYRILLIC_YERU  &lt 5 RU_CYRILLIC_VE  &lt 3 RU_CYRILLIC_A  &kp RU_CYRILLIC_PE                               &kp RU_CYRILLIC_ER  &kp RU_CYRILLIC_O    &kp RU_CYRILLIC_EL   &kp RU_CYRILLIC_DE     &kp RU_CYRILLIC_ZHE  &kp RU_CYRILLIC_E
 &kp LSHFT  &kp RU_CYRILLIC_YA       &kp RU_CYRILLIC_CHE     &kp RU_CYRILLIC_ES    &kp RU_CYRILLIC_EM   &kp RU_CYRILLIC_I                                &kp RU_CYRILLIC_TE  &td_signs            &kp RU_CYRILLIC_BE   &kp RU_CYRILLIC_YU     &kp RU_DOT           &kp LG(LEFT_ALT)
                                     &kp LEFT                &kp RIGHT             &kp BSPC             &mo_to_en LEFT_GUI 0  &kp LEFT_ALT    &kp ENTER  &kp SPACE           &trans               &kp DOWN             &kp UP
             >;
@@ -172,16 +172,29 @@
             display-name = "Nav";
         };
 
-        Num {
+        num_en {
             bindings = <
 &trans  &none        &none   &none   &none   &none                    &kp ASTRK  &kp N7  &kp N8  &kp N9  &kp P     &kp CARET
 &trans  &kp PERCENT  &none   &none   &trans  &none                    &kp PLUS   &kp N4  &kp N5  &kp N6  &kp N0    &kp SINGLE_QUOTE
 &trans  &none        &none   &none   &none   &none                    &kp MINUS  &kp N1  &kp N2  &kp N3  &kp FSLH  &trans
                      &trans  &trans  &trans  &trans  &trans    &none  &none      &trans  &trans  &trans
             >;
+
+            label = "Numbers en";
         };
 
-        sym {
+        num_ru {
+            bindings = <
+&trans  &none        &none   &none   &none   &none                    &kp ASTRK  &kp N7  &kp N8  &kp N9  &kp P     &kp CARET
+&trans  &kp PERCENT  &none   &none   &trans  &none                    &kp PLUS   &kp N4  &kp N5  &kp N6  &kp N0    &kp SINGLE_QUOTE
+&trans  &none        &none   &none   &none   &none                    &kp MINUS  &kp N1  &kp N2  &kp N3  &kp FSLH  &trans
+                     &trans  &trans  &trans  &trans  &trans    &none  &none      &trans  &trans  &trans
+            >;
+
+            label = "Numbers ru";
+        };
+
+        sym_en {
             bindings = <
 &trans  &none        &kp AT     &none   &kp DLLR  &none                     &kp ASTRK  &kp LEFT_BRACKET  &kp AMPS       &kp RIGHT_BRACKET  &kp P      &kp CARET
 &trans  &kp PERCENT  &kp LPAR   &trans  &kp RPAR  &none                     &kp PLUS   &kp LBRC          &kp EQUAL      &kp RIGHT_BRACE    &kp UNDER  &kp SINGLE_QUOTE
@@ -189,7 +202,18 @@
                      &trans     &trans  &trans    &trans  &trans    &trans  &trans     &trans            &trans         &trans
             >;
 
-            display-name = "Symbols";
+            display-name = "Symbols ru";
+            label = "Symbols en";
+        };
+
+        sym_ru {
+            display-name = "Symbols ru";
+            bindings = <
+&trans  &none        &kp AT     &none   &kp DLLR  &none                     &kp ASTRK  &kp LEFT_BRACKET  &kp AMPS       &kp RIGHT_BRACKET  &kp P      &kp CARET
+&trans  &kp PERCENT  &kp LPAR   &trans  &kp RPAR  &none                     &kp PLUS   &kp LBRC          &kp EQUAL      &kp RIGHT_BRACE    &kp UNDER  &kp SINGLE_QUOTE
+&trans  &kp TILDE    &kp GRAVE  &none   &kp HASH  &none                     &kp MINUS  &kp EXCL          &kp LESS_THAN  &kp GREATER_THAN   &kp SLASH  &trans
+                     &trans     &trans  &trans    &trans  &trans    &trans  &trans     &trans            &trans         &trans
+            >;
         };
 
         adj {
@@ -205,10 +229,10 @@
 
         mouse {
             bindings = <
-&trans  &trans  &trans  &trans       &trans    &trans                      &trans    &trans         &trans       &trans  &trans  &trans
-&trans  &trans  &mo 7   &mkpl 8 MB2  &mkp MB1  &mkp MB3                    &mkp MB3  &mkp MB1       &mkpl 8 MB2  &mo 7   &trans  &trans
-&trans  &trans  &trans  &trans       &trans    &trans                      &trans    &kp PAGE_DOWN  &kp PAGE_UP  &trans  &trans  &trans
-                &trans  &trans       &trans    &trans    &trans    &trans  &trans    &trans         &trans       &trans
+&trans  &trans  &trans  &trans        &trans    &trans                      &trans    &trans         &trans        &trans  &trans  &trans
+&trans  &trans  &mo 9   &mkpl 10 MB2  &mkp MB1  &mkp MB3                    &mkp MB3  &mkp MB1       &mkpl 10 MB2  &mo 9   &trans  &trans
+&trans  &trans  &trans  &trans        &trans    &trans                      &trans    &kp PAGE_DOWN  &kp PAGE_UP   &trans  &trans  &trans
+                &trans  &trans        &trans    &trans    &trans    &trans  &trans    &trans         &trans        &trans
             >;
 
             display-name = "Mouse";
@@ -216,10 +240,10 @@
 
         scroll {
             bindings = <
-&trans  &trans  &trans  &trans       &trans    &trans                      &trans    &trans    &trans       &trans  &trans  &trans
-&trans  &trans  &trans  &mkpl 8 MB2  &mkp MB1  &mkp MB3                    &mkp MB3  &mkp MB1  &mkpl 8 MB2  &trans  &trans  &trans
-&trans  &trans  &trans  &trans       &trans    &trans                      &trans    &trans    &trans       &trans  &trans  &trans
-                &trans  &trans       &trans    &trans    &trans    &trans  &trans    &trans    &trans       &trans
+&trans  &trans  &trans  &trans        &trans    &trans                      &trans    &trans    &trans        &trans  &trans  &trans
+&trans  &trans  &trans  &mkpl 10 MB2  &mkp MB1  &mkp MB3                    &mkp MB3  &mkp MB1  &mkpl 10 MB2  &trans  &trans  &trans
+&trans  &trans  &trans  &trans        &trans    &trans                      &trans    &trans    &trans        &trans  &trans  &trans
+                &trans  &trans        &trans    &trans    &trans    &trans  &trans    &trans    &trans        &trans
             >;
 
             display-name = "Scroll";
