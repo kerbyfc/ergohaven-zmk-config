@@ -264,9 +264,9 @@
 
         sym {
             bindings = <
-&trans  &kp PIPE   &kp HASH   &kp LESS_THAN  &kp GT    &kp CARET                           &kp PERCENT  &kp LEFT_BRACKET  &kp ASTRK      &kp RIGHT_BRACKET  &kp TILDE     &trans
-&trans  &kp AMPS   &kp EQUAL  &trans         &kp RPAR  &kp PRCNT                           &kp PLUS     &kp LBRC          &kp APOS       &kp RIGHT_BRACE    &kp QUESTION  &none
-&trans  &kp SLASH  &kp GRAVE  &none          &kp PLUS  &kp BACKSLASH                       &kp MINUS    &kp MINUS         &kp LESS_THAN  &kp GREATER_THAN   &kp EXCL      &trans
+&trans  &kp PIPE   &kp HASH   &kp LESS_THAN  &kp GT    &kp CARET                           &kp PERCENT  &kp LEFT_BRACKET  &kp AMPS       &kp RIGHT_BRACKET  &kp ASTRK     &none
+&trans  &kp AMPS   &kp LPAR   &trans         &kp RPAR  &kp PRCNT                           &kp PLUS     &kp LBRC          &kp EQUAL      &kp RIGHT_BRACE    &kp P         &kp SINGLE_QUOTE
+&trans  &kp TILDE  &kp GRAVE  &none          &kp PLUS  &kp BACKSLASH                       &kp MINUS    &kp EXCL          &kp LESS_THAN  &kp GREATER_THAN   &kp QUESTION  &trans
                    &trans     &trans         &trans    &trans         &trans    &kp COMMA  &kp DOT      &trans            &trans         &trans
             >;
 
