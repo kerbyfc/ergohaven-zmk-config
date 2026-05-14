@@ -11,9 +11,9 @@
 
 / {
     behaviors {
-        td_signs: td_signs {
+        ru_signs: ru_signs {
             compatible = "zmk,behavior-tap-dance";
-            label = "TD_SIGNS";
+            label = "RU_SIGNS";
             #binding-cells = <0>;
             bindings = <&kp RU_CYRILLIC_SOFT_SIGN>, <&kp RU_CYRILLIC_HARD_SIGN>;
         };
@@ -57,6 +57,23 @@
             hold-trigger-key-positions = <6 18 30 31 19 7 20 32 8 9 10 11 23 22 21 33 34 35 45 44 41 42>;
             hold-trigger-on-release;
             flavor = "balanced";
+        };
+
+        ru_semi_colon: ru_semi_colon {
+            compatible = "zmk,behavior-mod-morph";
+            label = "RU_SEMI_COLON";
+            bindings = <&kp LG(RU_SEMI)>, <&kp RU_COLON>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+            keep-mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        ru_io: ru_io {
+            compatible = "zmk,behavior-tap-dance";
+            label = "RU_IO";
+            #binding-cells = <0>;
+            bindings = <&kp RU_CYRILLIC_IE>, <&kp RU_CYRILLIC_IO>;
         };
 
         zip_auto_mouse: zip_auto_mouse {
@@ -143,7 +160,7 @@
         en {
             bindings = <
 &kp TAB       &kp Q  &kp W     &kp E      &kp R          &kp T                                            &kp Y      &kp U   &kp I      &kp O    &kp P          &kp LEFT_BRACKET
-&kp CAPSLOCK  &kp A  &hrl 3 S  &lt 5 D    &hrl 3 F       &kp G                                            &kp H      &kp J   &kp K      &kp L    &kp SEMICOLON  &kp SINGLE_QUOTE
+&kp CAPSLOCK  &kp A  &hrl 2 S  &lt 5 D    &hrl 3 F       &kp G                                            &kp H      &kp J   &kp K      &kp L    &kp SEMICOLON  &kp SINGLE_QUOTE
 &kp LSHFT     &kp Z  &kp X     &kp C      &kp V          &kp B                                            &kp N      &kp M   &kp COMMA  &kp DOT  &kp FSLH       &kp LG(LEFT_ALT)
                      &kp LEFT  &kp RIGHT  &kp BACKSPACE  &mo_to_ru LEFT_GUI 0  &kp LEFT_ALT    &kp ENTER  &kp SPACE  &trans  &kp DOWN   &kp UP
             >;
@@ -154,9 +171,9 @@
         ru {
             display-name = "Ru";
             bindings = <
-&kp TAB    &kp RU_CYRILLIC_SHORT_I  &kp RU_CYRILLIC_TSE     &kp RU_CYRILLIC_U     &kp RU_CYRILLIC_KA   &kp RU_CYRILLIC_IE                               &kp RU_CYRILLIC_EN  &kp RU_CYRILLIC_GHE  &kp RU_CYRILLIC_SHA  &kp RU_CYRILLIC_SHCHA  &kp RU_CYRILLIC_ZE   &kp RU_CYRILLIC_HA
-&kp CAPS   &kp RU_CYRILLIC_EF       &lt 3 RU_CYRILLIC_YERU  &lt 5 RU_CYRILLIC_VE  &lt 3 RU_CYRILLIC_A  &kp RU_CYRILLIC_PE                               &kp RU_CYRILLIC_ER  &kp RU_CYRILLIC_O    &kp RU_CYRILLIC_EL   &kp RU_CYRILLIC_DE     &kp RU_CYRILLIC_ZHE  &kp RU_CYRILLIC_E
-&kp LSHFT  &kp RU_CYRILLIC_YA       &kp RU_CYRILLIC_CHE     &kp RU_CYRILLIC_ES    &kp RU_CYRILLIC_EM   &kp RU_CYRILLIC_I                                &kp RU_CYRILLIC_TE  &td_signs            &kp RU_CYRILLIC_BE   &kp RU_CYRILLIC_YU     &kp RU_DOT           &kp LG(LEFT_ALT)
+&kp TAB    &kp RU_CYRILLIC_SHORT_I  &kp RU_CYRILLIC_TSE     &kp RU_CYRILLIC_U     &kp RU_CYRILLIC_KA   &ru_io                                           &kp RU_CYRILLIC_EN  &kp RU_CYRILLIC_GHE  &kp RU_CYRILLIC_SHA  &kp RU_CYRILLIC_SHCHA  &kp RU_CYRILLIC_ZE   &kp RU_CYRILLIC_HA
+&kp CAPS   &kp RU_CYRILLIC_EF       &lt 2 RU_CYRILLIC_YERU  &lt 6 RU_CYRILLIC_VE  &lt 4 RU_CYRILLIC_A  &kp RU_CYRILLIC_PE                               &kp RU_CYRILLIC_ER  &kp RU_CYRILLIC_O    &kp RU_CYRILLIC_EL   &kp RU_CYRILLIC_DE     &kp RU_CYRILLIC_ZHE  &kp RU_CYRILLIC_E
+&kp LSHFT  &kp RU_CYRILLIC_YA       &kp RU_CYRILLIC_CHE     &kp RU_CYRILLIC_ES    &kp RU_CYRILLIC_EM   &kp RU_CYRILLIC_I                                &kp RU_CYRILLIC_TE  &ru_signs            &kp RU_CYRILLIC_BE   &kp RU_CYRILLIC_YU     &kp RU_DOT           &kp LG(LEFT_ALT)
                                     &kp LEFT                &kp RIGHT             &kp BSPC             &mo_to_en LEFT_GUI 0  &kp LEFT_ALT    &kp ENTER  &kp SPACE           &trans               &kp DOWN             &kp UP
             >;
         };
@@ -185,10 +202,10 @@
 
         num_ru {
             bindings = <
-&trans  &none        &none   &none   &none   &none                    &kp ASTRK  &kp N7  &kp N8  &kp N9  &kp P     &kp CARET
-&trans  &kp PERCENT  &none   &none   &trans  &none                    &kp PLUS   &kp N4  &kp N5  &kp N6  &kp N0    &kp SINGLE_QUOTE
-&trans  &none        &none   &none   &none   &none                    &kp MINUS  &kp N1  &kp N2  &kp N3  &kp FSLH  &trans
-                     &trans  &trans  &trans  &trans  &trans    &none  &none      &trans  &trans  &trans
+&trans  &none           &none   &none   &none   &none                    &en ASTRK  &kp N7  &kp N8  &kp N9  &en P     &en CARET
+&trans  &en RU_PERCENT  &none   &none   &trans  &none                    &en PLUS   &kp N4  &kp N5  &kp N6  &kp N0    &en SINGLE_QUOTE
+&trans  &none           &none   &none   &none   &none                    &en MINUS  &kp N1  &kp N2  &kp N3  &en FSLH  &trans
+                        &trans  &trans  &trans  &trans  &trans    &none  &none      &trans  &trans  &trans
             >;
 
             label = "Numbers ru";
@@ -209,9 +226,9 @@
         sym_ru {
             display-name = "Symbols ru";
             bindings = <
-&trans  &none        &kp AT     &none   &kp DLLR  &none                     &kp ASTRK  &kp LEFT_BRACKET  &kp AMPS       &kp RIGHT_BRACKET  &kp P      &kp CARET
-&trans  &kp PERCENT  &kp LPAR   &trans  &kp RPAR  &none                     &kp PLUS   &kp LBRC          &kp EQUAL      &kp RIGHT_BRACE    &kp UNDER  &kp SINGLE_QUOTE
-&trans  &kp TILDE    &kp GRAVE  &none   &kp HASH  &none                     &kp MINUS  &kp EXCL          &kp LESS_THAN  &kp GREATER_THAN   &kp SLASH  &trans
+&trans  &none        &en AT     &none   &en DLLR  &none                     &en ASTRK  &en LEFT_BRACKET  &en AMPS       &en RIGHT_BRACKET  &kp P      &en CARET
+&trans  &en PERCENT  &en LPAR   &trans  &en RPAR  &none                     &en PLUS   &en LBRC          &en EQUAL      &en RIGHT_BRACE    &en UNDER  &en SINGLE_QUOTE
+&trans  &en TILDE    &en GRAVE  &none   &en HASH  &none                     &en MINUS  &en EXCL          &en LESS_THAN  &en GREATER_THAN   &en SLASH  &trans
                      &trans     &trans  &trans    &trans  &trans    &trans  &trans     &trans            &trans         &trans
             >;
         };
