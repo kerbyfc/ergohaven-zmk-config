@@ -171,10 +171,10 @@
         ru {
             display-name = "Ru";
             bindings = <
-&kp TAB    &kp RU_CYRILLIC_SHORT_I  &kp RU_CYRILLIC_TSE     &kp RU_CYRILLIC_U     &kp RU_CYRILLIC_KA   &ru_io                                           &kp RU_CYRILLIC_EN  &kp RU_CYRILLIC_GHE  &kp RU_CYRILLIC_SHA  &kp RU_CYRILLIC_SHCHA  &kp RU_CYRILLIC_ZE   &kp RU_CYRILLIC_HA
-&kp CAPS   &kp RU_CYRILLIC_EF       &lt 2 RU_CYRILLIC_YERU  &lt 6 RU_CYRILLIC_VE  &lt 4 RU_CYRILLIC_A  &kp RU_CYRILLIC_PE                               &kp RU_CYRILLIC_ER  &kp RU_CYRILLIC_O    &kp RU_CYRILLIC_EL   &kp RU_CYRILLIC_DE     &kp RU_CYRILLIC_ZHE  &kp RU_CYRILLIC_E
-&kp LSHFT  &kp RU_CYRILLIC_YA       &kp RU_CYRILLIC_CHE     &kp RU_CYRILLIC_ES    &kp RU_CYRILLIC_EM   &kp RU_CYRILLIC_I                                &kp RU_CYRILLIC_TE  &ru_signs            &kp RU_CYRILLIC_BE   &kp RU_CYRILLIC_YU     &kp RU_DOT           &kp LG(LEFT_ALT)
-                                    &kp LEFT                &kp RIGHT             &kp BSPC             &mo_to_en LEFT_GUI 0  &kp LEFT_ALT    &kp ENTER  &kp SPACE           &trans               &kp DOWN             &kp UP
+&kp TAB    &kp RU_CYRILLIC_SHORT_I  &kp RU_CYRILLIC_TSE      &kp RU_CYRILLIC_U     &kp RU_CYRILLIC_KA    &ru_io                                           &kp RU_CYRILLIC_EN  &kp RU_CYRILLIC_GHE  &kp RU_CYRILLIC_SHA  &kp RU_CYRILLIC_SHCHA  &kp RU_CYRILLIC_ZE   &kp RU_CYRILLIC_HA
+&kp CAPS   &kp RU_CYRILLIC_EF       &hrl 2 RU_CYRILLIC_YERU  &lt 6 RU_CYRILLIC_VE  &hrl 4 RU_CYRILLIC_A  &kp RU_CYRILLIC_PE                               &kp RU_CYRILLIC_ER  &kp RU_CYRILLIC_O    &kp RU_CYRILLIC_EL   &kp RU_CYRILLIC_DE     &kp RU_CYRILLIC_ZHE  &kp RU_CYRILLIC_E
+&kp LSHFT  &kp RU_CYRILLIC_YA       &kp RU_CYRILLIC_CHE      &kp RU_CYRILLIC_ES    &kp RU_CYRILLIC_EM    &kp RU_CYRILLIC_I                                &kp RU_CYRILLIC_TE  &ru_signs            &kp RU_CYRILLIC_BE   &kp RU_CYRILLIC_YU     &kp RU_DOT           &kp LG(LEFT_ALT)
+                                    &kp LEFT                 &kp RIGHT             &kp BSPC              &mo_to_en LEFT_GUI 0  &kp LEFT_ALT    &kp ENTER  &kp SPACE           &trans               &kp DOWN             &kp UP
             >;
         };
 
