@@ -90,6 +90,14 @@
             hold-trigger-key-positions = <5 17 29 28 16 4 3 15 27 37 36 26 14 2 1 13 25 38>;
         };
 
+        mouse_layer: mouse_layer {
+            compatible = "zmk,behavior-sticky-key";
+            label = "MOUSE_LAYER";
+            bindings = <&mo>;
+            #binding-cells = <1>;
+            release-after-ms = <200>;
+        };
+
         zip_auto_mouse: zip_auto_mouse {
             compatible = "zmk,input-processor-temp-layer";
             #input-processor-cells = <2>;
