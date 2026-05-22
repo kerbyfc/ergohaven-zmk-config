@@ -11,13 +11,6 @@
 
 / {
     behaviors {
-        ru_signs: ru_signs {
-            compatible = "zmk,behavior-tap-dance";
-            label = "RU_SIGNS";
-            #binding-cells = <0>;
-            bindings = <&kp RU_CYRILLIC_SOFT_SIGN>, <&kp RU_CYRILLIC_HARD_SIGN>;
-        };
-
         mo_to_ru: mo_to_ru {
             compatible = "zmk,behavior-hold-tap";
             label = "MO_TO_RU";
@@ -73,13 +66,6 @@
             keep-mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        ru_io: ru_io {
-            compatible = "zmk,behavior-tap-dance";
-            label = "RU_IO";
-            #binding-cells = <0>;
-            bindings = <&kp RU_CYRILLIC_IE>, <&kp RU_CYRILLIC_IO>;
-        };
-
         hrr: hrr {
             compatible = "zmk,behavior-hold-tap";
             label = "HRR";
@@ -92,6 +78,26 @@
             hold-trigger-on-release;
             flavor = "balanced";
             hold-trigger-key-positions = <5 17 29 28 16 4 3 15 27 37 36 26 14 2 1 13 25 38>;
+        };
+
+        ru_ie_io: ru_ie_io {
+            compatible = "zmk,behavior-mod-morph";
+            label = "RU_IE_IO";
+            bindings = <&kp RU_CYRILLIC_IE>, <&kp RU_CYRILLIC_IO>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_RALT|MOD_LALT)>;
+            keep-mods = <(MOD_RALT|MOD_LALT)>;
+        };
+
+        ru_signs: ru_signs {
+            compatible = "zmk,behavior-mod-morph";
+            label = "RU_SIGNS";
+            bindings = <&kp RU_CYRILLIC_SOFT_SIGN>, <&kp RU_CYRILLIC_HARD_SIGN>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LALT|MOD_RALT)>;
+            keep-mods = <(MOD_LALT|MOD_RALT)>;
         };
     };
 
@@ -182,7 +188,7 @@
         ru {
             display-name = "Ru";
             bindings = <
-&kp RU_UNDER   &kp RU_CYRILLIC_SHORT_I  &kp RU_CYRILLIC_TSE      &kp RU_CYRILLIC_U      &kp RU_CYRILLIC_KA    &ru_io                                           &kp RU_CYRILLIC_EN  &kp RU_CYRILLIC_GHE  &kp RU_CYRILLIC_SHA    &kp RU_CYRILLIC_SHCHA  &kp RU_CYRILLIC_ZE   &kp RU_CYRILLIC_HA
+&kp RU_UNDER   &kp RU_CYRILLIC_SHORT_I  &kp RU_CYRILLIC_TSE      &kp RU_CYRILLIC_U      &kp RU_CYRILLIC_KA    &ru_ie_io                                        &kp RU_CYRILLIC_EN  &kp RU_CYRILLIC_GHE  &kp RU_CYRILLIC_SHA    &kp RU_CYRILLIC_SHCHA  &kp RU_CYRILLIC_ZE   &kp RU_CYRILLIC_HA
 &kp CAPS       &kp RU_CYRILLIC_EF       &hrl 2 RU_CYRILLIC_YERU  &hrl 6 RU_CYRILLIC_VE  &hrl 4 RU_CYRILLIC_A  &kp RU_CYRILLIC_PE                               &kp RU_CYRILLIC_ER  &kp RU_CYRILLIC_O    &hrr 6 RU_CYRILLIC_EL  &kp RU_CYRILLIC_DE     &kp RU_CYRILLIC_ZHE  &kp RU_CYRILLIC_E
 &mt LSHFT TAB  &kp RU_CYRILLIC_YA       &kp RU_CYRILLIC_CHE      &kp RU_CYRILLIC_ES     &kp RU_CYRILLIC_EM    &kp RU_CYRILLIC_I                                &kp RU_CYRILLIC_TE  &ru_signs            &kp RU_CYRILLIC_BE     &kp RU_CYRILLIC_YU     &kp RU_DOT           &mt LG(LEFT_ALT) LS(TAB)
                                         &mo 8                    &mo 9                  &kp BSPC              &mo_to_en LEFT_GUI 0  &kp LEFT_ALT    &kp ENTER  &kp SPACE           &none                &kp DOWN               &kp UP
