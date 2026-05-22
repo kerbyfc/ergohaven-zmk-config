@@ -260,6 +260,17 @@
 
             display-name = "Adjust";
         };
+
+        mouse {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+                &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+            >;
+
+            label = "Mouse";
+        };
     };
 
     conditional_layers { compatible = "zmk,conditional-layers"; };
@@ -280,6 +291,6 @@
 
     sniper {
         layers = <1>;
-        input-processors = <&zip_xy_scaler 1 7>; 
+        input-processors = <&zip_xy_scaler 1 7>;
     };
 };
