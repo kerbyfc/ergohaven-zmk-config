@@ -265,10 +265,10 @@
     conditional_layers { compatible = "zmk,conditional-layers"; };
 };
 
-&trackball { cpi = <1600>; };
+&trackball { cpi = <2000>; };
 
 &trackball_listener {
-    input-processors = <&zip_xy_scaler 2 1>;
+    input-processors = <&zip_xy_scaler 20 9>;
 
     scroller {
         layers = <1>;
