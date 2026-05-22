@@ -263,10 +263,10 @@
 
         scroll {
             bindings = <
-&trans  &trans  &trans  &trans       &trans    &trans                      &trans    &trans    &trans       &trans  &trans  &trans
-&trans  &trans  &trans  &mkpl 9 MB2  &mkp MB1  &mkp MB3                    &mkp MB3  &mkp MB1  &mkpl 9 MB2  &trans  &trans  &trans
-&trans  &trans  &trans  &trans       &trans    &trans                      &trans    &trans    &trans       &trans  &trans  &trans
-                &trans  &trans       &trans    &trans    &trans    &trans  &trans    &trans    &trans       &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+                &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
             >;
 
             display-name = "Scroll";
@@ -274,10 +274,10 @@
 
         sniper {
             bindings = <
-&trans  &trans  &trans    &trans    &trans    &trans                      &trans    &trans    &trans    &trans    &trans  &trans
-&trans  &trans  &mkp MB3  &mkp MB2  &mkp MB1  &mkp MB3                    &mkp MB3  &mkp MB1  &mkp MB2  &mkp MB3  &trans  &trans
-&trans  &trans  &trans    &trans    &trans    &trans                      &trans    &trans    &trans    &trans    &trans  &trans
-                &trans    &trans    &trans    &trans    &trans    &trans  &trans    &trans    &trans    &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+                &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
             >;
 
             display-name = "Sniper";
