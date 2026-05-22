@@ -87,7 +87,6 @@
 
             #binding-cells = <0>;
             mods = <(MOD_RALT|MOD_LALT)>;
-            keep-mods = <(MOD_RALT|MOD_LALT)>;
         };
 
         ru_signs: ru_signs {
@@ -97,7 +96,6 @@
 
             #binding-cells = <0>;
             mods = <(MOD_LALT|MOD_RALT)>;
-            keep-mods = <(MOD_LALT|MOD_RALT)>;
         };
     };
 
@@ -298,6 +296,7 @@
             <&zip_xy_transform INPUT_TRANSFORM_Y_INVERT>,
             <&zip_xy_scaler 1 32>,
             <&zip_xy_to_scroll_mapper>;
+
         process-next;
     };
 
