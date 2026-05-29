@@ -105,36 +105,78 @@
         lbrk_en {
             bindings = <&kp LEFT_BRACKET>;
             key-positions = <7 8>;
+            layers = <0 3 5>;
         };
 
         lbr_en {
             bindings = <&kp LEFT_BRACE>;
             key-positions = <19 20>;
+            layers = <0 3 5>;
         };
 
         rbr_en {
             bindings = <&kp RIGHT_BRACE>;
             key-positions = <21 20>;
+            layers = <0 3 5>;
         };
 
         rbrk_en {
             bindings = <&kp RIGHT_BRACKET>;
             key-positions = <9 8>;
+            layers = <0 3 5>;
         };
 
         lpr_en {
             bindings = <&kp LPAR>;
             key-positions = <14 15>;
+            layers = <0 3 5>;
         };
 
         rpar_en {
             bindings = <&kp RPAR>;
             key-positions = <15 16>;
+            layers = <0 3 5>;
         };
 
         media {
             bindings = <&mo 10>;
             key-positions = <39 42>;
+        };
+
+        lbrk_ru {
+            bindings = <&en LEFT_BRACKET>;
+            key-positions = <7 8>;
+            layers = <1 4 6>;
+        };
+
+        lbr_ru {
+            bindings = <&en LEFT_BRACE>;
+            key-positions = <19 20>;
+            layers = <1 4 6>;
+        };
+
+        rbr_ru {
+            bindings = <&en RIGHT_BRACE>;
+            key-positions = <21 20>;
+            layers = <1 4 6>;
+        };
+
+        rbrk_ru {
+            bindings = <&en RIGHT_BRACKET>;
+            key-positions = <9 8>;
+            layers = <1 4 6>;
+        };
+
+        lpr_ru {
+            bindings = <&kp RU_LPAR>;
+            key-positions = <14 15>;
+            layers = <1 4 6>;
+        };
+
+        rpar_ru {
+            bindings = <&kp RU_RPAR>;
+            key-positions = <15 16>;
+            layers = <1 4 6>;
         };
     };
 
@@ -259,7 +301,7 @@
                      &trans     &trans  &trans    &trans  &trans    &trans  &trans     &trans            &trans         &trans
             >;
 
-            display-name = "Symbols ru";
+            display-name = "Symbols en";
             label = "Symbols en";
         };
 
@@ -271,6 +313,8 @@
 &trans  &en TILDE    &en GRAVE  &none   &en HASH  &none                     &en MINUS  &en EXCL          &en LESS_THAN  &en GREATER_THAN   &en SLASH  &trans
                      &trans     &trans  &trans    &trans  &trans    &trans  &trans     &trans            &trans         &trans
             >;
+
+            label = "Symbols ru";
         };
 
         adj {
