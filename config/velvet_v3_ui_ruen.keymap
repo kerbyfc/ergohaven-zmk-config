@@ -131,6 +131,11 @@
             bindings = <&en RPAR>;
             key-positions = <15 16>;
         };
+
+        media {
+            bindings = <&mo 10>;
+            key-positions = <36 37>;
+        };
     };
 
     macros {
