@@ -102,14 +102,34 @@
     combos {
         compatible = "zmk,combos";
 
-        left_bracket {
+        lbrk {
             bindings = <&kp LEFT_BRACKET>;
-            key-positions = <15 16>;
+            key-positions = <7 8>;
         };
 
-        left_brace {
-            bindings = <&kp LEFT_BRACE>;
+        lbr {
+            bindings = <&en LEFT_BRACE>;
             key-positions = <19 20>;
+        };
+
+        rbr {
+            bindings = <&en RIGHT_BRACE>;
+            key-positions = <21 20>;
+        };
+
+        rbrk {
+            bindings = <&en RIGHT_BRACKET>;
+            key-positions = <9 8>;
+        };
+
+        lpr {
+            bindings = <&en LPAR>;
+            key-positions = <14 15>;
+        };
+
+        rpar {
+            bindings = <&en RPAR>;
+            key-positions = <15 16>;
         };
     };
 
