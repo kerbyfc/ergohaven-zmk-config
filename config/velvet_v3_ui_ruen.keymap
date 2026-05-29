@@ -134,7 +134,7 @@
 
         media {
             bindings = <&mo 10>;
-            key-positions = <36 37>;
+            key-positions = <39 42>;
         };
     };
 
