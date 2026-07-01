@@ -371,7 +371,6 @@
     cpi = <1000>; 
 };
 
-// Конфигурация слоев трекбола без экспериментальных параметров
 &trackball_listener {
     input-processors = <&zip_xy_scaler 1 1>; 
 
@@ -379,7 +378,6 @@
         layers = <8>;
         input-processors = 
             <&zip_xy_to_scroll_mapper>, 
-            <&zip_xy_transform INPUT_TRANSFORM_Y_INVERT>, 
             <&zip_xy_scaler 1 4>;
         process-next;
     };
